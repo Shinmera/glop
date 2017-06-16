@@ -260,7 +260,8 @@
       (glop-bridge:ns-autorelease
         (setf gl-context (glop-bridge:ns-opengl-context-init pixel-format)))
       (glop-bridge:ns-release pixel-format)
-      (attach-gl-context window gl-context))))
+      (attach-gl-context window gl-context)
+      gl-context)))
 
 (defmethod destroy-gl-context (ctx)
   (detach-gl-context ctx))
